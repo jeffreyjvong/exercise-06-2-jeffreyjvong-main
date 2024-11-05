@@ -3,27 +3,24 @@
 
 # Task 1. Modify the function countdown()
 def countdown(secs):
-  msg = secs
+  msg = None
 
-  if msg == -60:
-    return "T-60 Seconds"
-  elif msg == -30:
-    return "T-30 Seconds"
-  elif msg == -15:
-    return "T-15 Seconds"
-  elif msg in [-10, -9, -8, -7, -6, -5, -3, -2, -1]:
-    return f"{msg * -1}"
-  elif msg == -4:
-    return "Four stage engine start."
-  elif msg == 0:
-    return "0\nBooster Ignition"
-  elif msg == 1:
-    return "and lift off of Artemis I."
-  elif msg == 2:
-    return "We rise together to the moon and beyond!"
-  else:
-    return None
+  if secs == -60:
+    msg = "T-60 Seconds"
+  elif secs == -30:
+    msg = "T-30 Seconds"
+  elif secs == -15:
+    msg = "T-15 Seconds"
+  elif secs in [-10, -9, -8, -7, -6, -5, -3, -2, -1]:
+    msg = f"{secs * -1}"
+  elif secs == -4:
+    msg = "Four stage engine start."
+  elif secs == 0:
+    msg = "0\nBooster Ignition\nand lift off of Artemis I."
+  elif secs == 2:
+    msg = "We rise together to the moon and beyond!"
 
+  return msg
 
 def main():
   # Task 2. Manually test by taking input for seconds variable
